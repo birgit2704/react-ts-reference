@@ -1,10 +1,11 @@
+import { useRef } from "react";
 import Input from "./components/Input";
 
 function App() {
+  const input = useRef<HTMLInputElement>(null);
   return (
     <main>
-      <Input id="name" label="Your name" type="text" />
-      <Input id="age" label="Your age" type="number" />
+      <Input label="test" id="test" ref={input} />
     </main>
   );
 }
